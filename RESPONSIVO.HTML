@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regalo de Dios</title>
+
+  <style>
+    /* =============================== */
+    /*         ESTILOS GENERALES       */
+    /* =============================== */
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #03021b;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* =============================== */
+    /*            HEADER               */
+    /* =============================== */
+
+    header {
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 10px solid #f2c300;
+
+      background-color: #001a3d;
+
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          transparent 0px,
+          transparent 90px,
+          #f2c300 90px,
+          #f2c300 94px
+        ),
+        repeating-linear-gradient(
+          45deg,
+          transparent 0px,
+          transparent 40px,
+          rgba(255,255,255,0.3) 40px,
+          rgba(255,255,255,0.3) 60px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          transparent 0px,
+          transparent 50px,
+          #4a6fa1 50px,
+          #4a6fa1 70px
+        );
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin: 5px 0;
+    }
+
+    /* Texto animado */
+    #colegio-animado {
+      color: black;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-top: 15px;
+      position: relative;
+      animation: mover 3s infinite alternate linear;
+      text-shadow:
+        -2px -2px 0 white,
+         2px -2px 0 white,
+        -2px  2px 0 white,
+         2px  2px 0 white;
+    }
+
+    @keyframes mover {
+      from { left: 0px; }
+      to { left: 25px; }
+    }
+
+    /* RESPONSIVIDAD DEL HEADER */
+    @media (max-width: 992px) {
+      header h1 { font-size: 2.4rem; }
+      #colegio-animado { font-size: 1.1rem; }
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 30px 15px; background-size: 250%; }
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+      #colegio-animado {
+        font-size: 1rem;
+        animation: none;
+        position: static;
+      }
+    }
+
+    /* =============================== */
+    /*        CONTENEDOR PRINCIPAL     */
+    /* =============================== */
+
+    main {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contenedor-titulo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .contenedor-titulo img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 15px;
+    }
+
+    .contenedor-titulo div {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    /* Imagen portada */
+    .portada img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 100px;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    /* =============================== */
+    /*             MENÚ                */
+    /* =============================== */
+
+    .menu-section {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin-top: 30px;
+    }
+
+    select {
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid #121cb0;
+      border-radius: 8px;
+      width: 250px;
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #4853cb;
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover { background-color: #071553; }
+
+    /* =============================== */
+    /*            FOOTER               */
+    /* =============================== */
+
+    footer {
+      background-color: #02055c;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+
+<body>
+	<!-- MUSICA DE FONDO -->
+  	<audio id="musica" autoplay loop muted>
+   	 <source src="audio/CRECERSANO.mp3" type="audio/mpeg">
+ 	 </audio>
+
+  	<script>
+  	  window.addEventListener("click", function() {
+      	const musica = document.getElementById("musica");
+     	 musica.muted = false;
+    	  musica.play();
+   	 }, { once: true });
+ 	 </script>
+
+
+
+
+  <!-- ===================================== -->
+  <!--                HEADER                 -->
+  <!-- ===================================== -->
+  <header>
+
+    <h1 style="
+      color: white;
+      text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;">
+      Regalo de Dios
+    </h1>
+
+    <p style="
+      color: white;
+      text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;">
+      Cuidar de nuestro cuerpo es cuidar el templo de Dios
+    </p>
+
+    <p id="colegio-animado">COLEGIO ISTMO</p>
+
+  </header>
+
+
+
+  <!-- ===================================== -->
+  <!--                MAIN                   -->
+  <!-- ===================================== -->
+  <main>
+
+    <div class="contenedor-titulo">
+
+      <img src="imagenes/ESCUELA.png" alt="Comer sano">
+
+      <div>
+        <h1><strong>Y tú, ¿Cómes sano?</strong></h1>
+        <p>
+          La mala alimentación no solo afecta nuestro cuerpo, también debilita nuestra mente y nuestro espíritu.<br><br>
+          La Biblia nos recuerda en <strong>1 Corintios 6:19 (RVR2015)</strong>:<br>
+          “¿No sabéis que vuestro cuerpo es templo del Espíritu Santo… y que no sois vuestros?”<br><br>
+          Este versículo nos invita a reconocer que cada decisión que tomamos sobre lo que comemos refleja el valor que damos al regalo que Dios nos ha confiado.
+        </p>
+      </div>
+
+      <div class="portada">
+        <img src="imagenes/logo.png" alt="¿Quieres ser parte?">
+      </div>
+
+    </div>
+
+
+    <!-- MENÚ -->
+    <div class="menu-section">
+      <h2>Explora nuestro sitio</h2>
+
+      <select id="menuOpciones">
+        <option value="">-- Selecciona una opción --</option>
+        <option value="Recetario.html">Ver nuestras recetas</option>
+      </select>
+
+      <button onclick="irAPagina()">Ir</button>
+    </div>
+
+  </main>
+
+
+
+  <!-- ===================================== -->
+  <!--                FOOTER                 -->
+  <!-- ===================================== -->
+  <footer>
+    <p>© Colegio Istmo | De la mano con padres de familia, juntos por la misión</p>
+  </footer>
+
+
+
+  <script>
+    function irAPagina() {
+      let seleccion = document.getElementById("menuOpciones").value;
+      if (seleccion) {
+        window.location.href = seleccion;
+      } else {
+        alert("Por favor, selecciona una opción");
+      }
+    }
+  </script>
+
+</body>
+</html>
